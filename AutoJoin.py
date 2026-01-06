@@ -9,8 +9,11 @@ Fullhd_join_y = 389
 Fullhd_cancel_x = 1100
 Fullhd_cancel_y = 609
 
-#Quadhd_x =
-#Quadhd_y =
+Quadhd_join_x = 1761
+Quadhd_join_y = 519
+
+Quadhd_cancel_x = 1502
+Quadhd_cancel_y = 810
 
 
 # Debugging, there is something wrong with matching color, it only works when i move around the button, when i stop it doesnt print good dunno why
@@ -21,10 +24,16 @@ Fullhd_cancel_y = 609
 #     x , y = pyautogui.position()
 #     if(pyautogui.pixel(x,y) == (224,207,126) or pyautogui.pixel(x,y) == (250,231,141)):
 #         print("good")
-                
+
+# while(not keyboard.is_pressed("p")):
+#     time.sleep(1)
+#     x,y = pyautogui.position()
+#     print(pyautogui.position())
+#     print( pyautogui.pixel(x,y))
+
 
 def Program():
-
+    print("\n Hell Let Loose AutoJoin \n")
     print("Hell Let Loose has to be full screen or borderless for autoclick to work")
     print("Select the server that you want to join and choose correct resolution")
     print("When you select the resolution there will be a 10s delay before the program begins for users that have only one monitor")
@@ -37,7 +46,6 @@ def Program():
 
     match result:
         case "a":
-
             print("Delay started")
             time.sleep(10)
             while(not keyboard.is_pressed("p")):
@@ -50,13 +58,26 @@ def Program():
                 pyautogui.moveTo(Fullhd_cancel_x,Fullhd_cancel_y)
                 pyautogui.click()
 
-                time.sleep(5)
+                time.sleep(0.2)
 
             print("Program was stopped")
 
         case "b":
-            #code for b
-            print("not done yet")
+            print("Delay started")
+            time.sleep(10)
+            while(not keyboard.is_pressed("p")):
+
+                pyautogui.moveTo(Quadhd_join_x,Quadhd_join_y)
+                pyautogui.click()
+
+                time.sleep(5)
+
+                pyautogui.moveTo(Quadhd_cancel_x,Quadhd_cancel_y)
+                pyautogui.click()
+
+                time.sleep(0.2)
+
+            print("Program was stopped")
 
         case _:
             #code for default
