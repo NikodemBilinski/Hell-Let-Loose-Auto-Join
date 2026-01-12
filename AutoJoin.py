@@ -33,7 +33,7 @@ Quadhd_cancel_y = 810
 #     print(pyautogui.position())
 #     print( pyautogui.pixel(x,y))
 
-def Program_ForOlderVersion():
+def Program_ColorMatching():
     print("\n Hell Let Loose AutoJoin Color Matching\n")
     print("Hell Let Loose has to be full screen or borderless for autoclick to work")
     print("Select the server that you want to join and choose correct resolution")
@@ -89,7 +89,7 @@ def Program_ForOlderVersion():
             #code for default
             print("Write correct one dumbass")
 
-def Program_ForNewerVersion():
+def Program_JustClicking():
     print("\n Hell Let Loose AutoJoin Just Clicking\n")
     print("Hell Let Loose has to be full screen or borderless for autoclick to work")
     print("Select the server that you want to join and choose correct resolution")
@@ -148,8 +148,8 @@ print("b) Just  Clicking: (unsafe to leave unwatched, but it should be working o
 result = input()
 
 if(result == "a"):
-    Program_ForOlderVersion()
+    Program_ColorMatching()
 if(result == "b"):
-    Program_ForNewerVersion()
+    Program_JustClicking()
 
 
